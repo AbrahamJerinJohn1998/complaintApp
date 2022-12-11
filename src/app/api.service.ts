@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,31 @@ import { Injectable } from '@angular/core';
 })
 export class ApiService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+  addUser=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/add",dataToSend)
+  }
+  getProfileDetails=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/view",dataToSend)
+  }
+  addLogin=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/login",dataToSend)
+  }
+  addComplaint=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/addComplaint",dataToSend)
+  }
+  
+  viewComplaints=()=>
+    {
+      return this.http.get("http://localhost:8080/viewall")
+    }
+  viewMyComplaints=(dataToSend:any)=>
+  {
+      return this.http.post("http://localhost:8080/mycomplaint",dataToSend)
+  }
 }
