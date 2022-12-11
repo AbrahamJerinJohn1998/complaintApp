@@ -36,7 +36,7 @@ const myRoute:Routes=[
     component:DashboardComponent
   },
   {
-    path:"addcomplaint",
+    path:"addComplaint",
     component:AddcomplaintComponent
   },
   {
