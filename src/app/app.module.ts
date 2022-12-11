@@ -11,6 +11,8 @@ import { NavbaradminComponent } from './navbaradmin/navbaradmin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ViewprofileComponent } from './viewprofile/viewprofile.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddcomplaintComponent } from './addcomplaint/addcomplaint.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -50,7 +52,9 @@ const myRoute:Routes=[
     UserloginComponent,
     NavbarComponent,
     NavbaradminComponent,
-    ViewprofileComponent
+    ViewprofileComponent,
+    DashboardComponent,
+    AddcomplaintComponent
   ],
   imports: [
     BrowserModule,
