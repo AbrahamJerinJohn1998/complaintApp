@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { ViewprofileComponent } from './viewprofile/viewprofile.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddcomplaintComponent } from './addcomplaint/addcomplaint.component';
+import { ViewmycomplaintComponent } from './viewmycomplaint/viewmycomplaint.component';
 const myRoute:Routes=[
   {
     path:"",
@@ -25,23 +26,23 @@ const myRoute:Routes=[
   {
     path:"userreg",
     component:UserregComponent
+  },
+  {
+    path:"view",
+    component:ViewprofileComponent
+  },
+  {
+    path:"dash",
+    component:DashboardComponent
+  },
+  {
+    path:"addcomplaint",
+    component:AddcomplaintComponent
+  },
+  {
+    path:"mycomplaint",
+    component:ViewmycomplaintComponent
   }
-  // {
-  //   path:"view",
-  //   component:ViewProfileComponent
-  // },
-  // {
-  //   path:"dash",
-  //   component:DashBoardComponent
-  // },
-  // {
-  //   path:"addcomplaint",
-  //   component:AddComplaintComponent
-  // },
-  // {
-  //   path:"mycomplaint",
-  //   component:ViewMyComplaintComponent
-  // }
 ]
 
 @NgModule({
@@ -54,7 +55,8 @@ const myRoute:Routes=[
     NavbaradminComponent,
     ViewprofileComponent,
     DashboardComponent,
-    AddcomplaintComponent
+    AddcomplaintComponent,
+    ViewmycomplaintComponent
   ],
   imports: [
     BrowserModule,
